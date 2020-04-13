@@ -1,4 +1,9 @@
+.nav--button {
+	color: #6c5ce7;
+}
 
-.nav--title {
-  color: black;
+.nav--button_separator {
+	color: black;
+	padding-left: 15px;
+	padding-right: 15px;
 }

@@ -20,7 +20,7 @@
       </v-list>
     </v-navigation-drawer>
     <!-- View on larger displays -->
-    <v-toolbar app>
+    <v-app-bar app fixed>
       <v-toolbar-side-icon color="black" class="hidden-md-and-up" @click="drawer = !drawer">
         <v-icon>mdi-dots-vertical</v-icon>  
       </v-toolbar-side-icon>
@@ -28,9 +28,9 @@
       <v-toolbar-title>{{ appTitle }}</v-toolbar-title>
       <v-spacer class="hidden-sm-and-down"></v-spacer>
       <div v-for="(item, index) in items" :key="index">
-        <v-btn flat class="hidden-sm-and-down">{{ item.title }}</v-btn>
+        <v-btn color="#6c5ce7" text>{{ item.title }}</v-btn>
       </div>
-    </v-toolbar>
+    </v-app-bar>
   </span>
 </template>
 <script>
@@ -41,7 +41,7 @@ export default {
     return {
       appTitle: 'JOE HOLT',
       drawer: false,
-      items: [{ title: 'Menu' }, { title: 'Sign In' }, { title: 'Join' }]
+      items: [{ title: 'About' }, { title: 'Projects' }, { title: 'Experience' }]
     };
   }
 };
