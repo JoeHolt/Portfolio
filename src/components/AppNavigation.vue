@@ -5,30 +5,32 @@
     <v-navigation-drawer
       app
       v-model="drawer"
-      color="#b2bec3"
+      class="gray lighten-2"
       disable-resize-watcher
     >
       <v-list>
-        <template v-for="(item, index) in items">
-          <v-list-tile :key="index">
-            <v-list-tile-content>
-              {{ item.title }}
-            </v-list-tile-content>
-          </v-list-tile>
-          <v-divider :key="`divider-${index}`"></v-divider>
-        </template>
+  	<v-list-item
+	  v-for="item in items"
+	  :key="item.title"
+	>
+	  <v-list-item-content>
+	    <v-list-item-title v-text="item.title"></v-list-item-title>
+          <!-- <v-divider :key="`divider-${index}`"></v-divider> -->
+	  </v-list-item-content>
+	</v-list-item>	
       </v-list>
     </v-navigation-drawer>
     <!-- View on larger displays -->
-    <v-app-bar app fixed>
-      <v-toolbar-side-icon color="black" class="hidden-md-and-up" @click="drawer = !drawer">
+    <v-app-bar app fixed flat>
+      <v-app-bar-nav-icon color="black" class="hidden-md-and-up" @click="drawer = !drawer">
         <v-icon>mdi-dots-vertical</v-icon>  
-      </v-toolbar-side-icon>
+      </v-app-bar-nav-icon>
       <v-spacer class="hidden-md-and-up"></v-spacer>
       <v-toolbar-title>{{ appTitle }}</v-toolbar-title>
       <v-spacer class="hidden-sm-and-down"></v-spacer>
-      <div v-for="(item, index) in items" :key="index">
-        <v-btn color="#6c5ce7" text>{{ item.title }}</v-btn>
+      <div class="hidden-sm-and-down" v-for="(item, index) in items" :key="index">
+	<span v-if="index != 0" class="pl-4"></span>
+        <v-btn color="#6c5ce7" @click="clickNavbar(index)" text :outlined="active == index">{{ item.title }}</v-btn>
       </div>
     </v-app-bar>
   </span>
@@ -41,8 +43,14 @@ export default {
     return {
       appTitle: 'JOE HOLT',
       drawer: false,
-      items: [{ title: 'About' }, { title: 'Projects' }, { title: 'Experience' }]
+      active: 0,
+      items: [{ title: 'About' }, { title: 'Projects' }, { title: 'Experience' }, { title: 'Contact' }]
     };
+  },
+  methods: {
+    clickNavbar(index) {
+      this.active = index;
+    }
   }
 };
 </script>
