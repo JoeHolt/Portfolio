@@ -2,7 +2,7 @@
   <v-container fluid pb-0 class="general-image-header">
     <v-row style="height: 100%">
       <!-- Image half of screen -->
-      <v-col class="gih--img_container" :cols="7">
+      <v-col class="gih--img_container noselect" :cols="7">
         <img src="@/assets/simple_joe.png" class="gih--header_img"/>
       </v-col>
       <!-- Text half of screen -->
@@ -11,9 +11,9 @@
         <v-container style="height: 100%;">
           <v-row style="height: 100%;" align="center">
             <v-col class="mr-12">
-              <p class="display-1 font-weight-bold grey--text text--lighten-1 text-xs-center mb-0">{{ preTitle }}</p>
-              <p class="display-4 font-weight-black white--text text-xs-center mb-4">{{ title }}</p>
-              <p class="headline grey--text text--lighten-2 mb-4">{{ description }}</p>
+              <p class="display-1 font-weight-bold grey--text text--lighten-1 text-xs-center noselect mb-0">{{ preTitle }}</p>
+              <p class="display-4 font-weight-black white--text text-xs-center mb-4 noselect">{{ title }}</p>
+              <p class="headline grey--text text--lighten-2 mb-4 noselect">{{ description }}</p>
               <v-divider class="gih--text-separator"></v-divider>
               <v-btn class="deep-purple--text" depressed color="white" :x-large="true">Contact Me</v-btn>
             </v-col>
@@ -40,7 +40,7 @@ export default {
 <style>
 
 .general-image-header {
-  background-image: linear-gradient(to bottom right, #4a0072, #6c5ce7);
+  background-image: linear-gradient(to bottom right, #3031b4, #6c5ce7);
   height: 95vh;
 }
 

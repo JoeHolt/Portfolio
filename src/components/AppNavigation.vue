@@ -26,7 +26,7 @@
         <v-icon>mdi-dots-vertical</v-icon>  
       </v-app-bar-nav-icon>
       <v-spacer class="hidden-md-and-up"></v-spacer>
-      <v-toolbar-title>{{ appTitle }}</v-toolbar-title>
+      <v-toolbar-title class="noselect">{{ appTitle }}</v-toolbar-title>
       <v-spacer class="hidden-sm-and-down"></v-spacer>
       <div class="hidden-sm-and-down" v-for="(item, index) in items" :key="index">
 	<span v-if="index != 0" class="pl-4"></span>

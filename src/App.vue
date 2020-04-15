@@ -37,4 +37,5 @@ export default {
 }
 
 @import './assets/styles/nav.css';
+@import './assets/styles/general.css';
 </style>
