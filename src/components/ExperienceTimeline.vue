@@ -27,15 +27,11 @@
         <v-divider></v-divider>
         <v-card-actions v-show="experience.skills.length" class="text-center ml-1 mt-1">
           <div v-for="skill in experience.skills" v-bind:key="skill.title">
-            <v-chip
+            <skill-pill
               v-if="skill.category !== 'expand'"
-              class="noselect mb-2 mr-2"
-              :color="mapSkill(skill.category)"
-              pill
-              outlined
-              >
-              {{ skill.title }} 
-            </v-chip>
+              :title="skill.title"
+              :category="skill.category"
+              ></skill-pill>
             <div v-else style="width: 100%;">
               <v-dialog
                 v-model="coursesOpened"
@@ -86,9 +82,12 @@
 </template>
 
 <script>
-import mappings from '@/data/mappings.js';
+import SkillPill from '@/components/SkillPill';
 export default {
   name: 'ExperienceTimeline',
+  components: {
+    SkillPill
+  },
   data () {
     return {
       coursesOpened: false,
@@ -209,11 +208,6 @@ export default {
         },
       ]
     };
-  },
-  methods: {
-    mapSkill (cat) {
-      return mappings.mapSkillToColor(cat);
-    }
   }
 };
 </script>
