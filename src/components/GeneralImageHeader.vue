@@ -30,9 +30,14 @@ export default {
   data () {
     return {
       preTitle: 'HELLO, I\'M...',
-      title: 'JOE HOLT',
-      description: 'Thank you for visiting my portfolio! I am a Computer Science student at the University of Wisconsin-Madison with interests in High Performance Computing and Aritifical Intelligence. Please feel free to contact me with any questions or concerns!'
+      title: 'JOE HOLT'
     };
+  },
+  computed: {
+    description () {
+      var yrs = new Date(new Date() - new Date("11/10/1999")).getFullYear() - 1970;
+      return `Thank you for visiting my portfolio! I am a ${yrs} year old Computer Science student at the University of Wisconsin-Madison with interests in High Performance Computing and Aritifical Intelligence. Please feel free to contact me with any questions or concerns!`;
+    }
   }
 };
 </script>
