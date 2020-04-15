@@ -9,7 +9,13 @@
       <v-col :cols="5">
         <!-- Make a new grid to center on this side -->
         <v-container style="height: 100%;">
-          <v-row style="height: 100%;" align="center">
+          <v-row style="height: 10%; opacity: 70%;" align="start" justify="start">
+            <v-btn text x-large class="white--text">
+              <v-icon color="white" class="mr-2">mdi-chevron-up</v-icon>
+              PROJECTS
+            </v-btn>
+          </v-row>
+          <v-row style="height: 80%;" align="center">
             <v-col class="mr-12">
               <p
                 class="display-1 font-weight-bold grey--text text--lighten-1 text-xs-center noselect mb-0"
@@ -33,6 +39,12 @@
                 >Contact Me</v-btn
               >
             </v-col>
+          </v-row>
+          <v-row style="height: 10%; opacity: 70%;" align="end" justify="start">
+            <v-btn text x-large class="white--text">
+              <v-icon color="white" class="mr-2">mdi-chevron-down</v-icon>
+              EXPERIENCES
+            </v-btn>
           </v-row>
         </v-container>
       </v-col>
