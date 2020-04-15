@@ -1,6 +1,6 @@
 <template>
   <span>
-    <general-image-header></general-image-header>
+    <general-image-header v-if="true"></general-image-header>
     <image-overlay-header v-if="false"></image-overlay-header>
   </span>
 </template>

@@ -16,6 +16,9 @@ export default {
   name: 'App',
   components: {
     AppNavigation
+  },
+  created () {
+    document.title = 'Joe Holt | Portfolio';
   }
 };
 </script>
