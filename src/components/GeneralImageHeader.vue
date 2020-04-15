@@ -13,7 +13,8 @@
             <v-col class="mr-12">
               <p class="display-1 font-weight-bold grey--text text--lighten-1 text-xs-center mb-0">{{ preTitle }}</p>
               <p class="display-4 font-weight-black white--text text-xs-center mb-4">{{ title }}</p>
-              <p class="headline grey--text text--lighten-2 gih--text-separator">{{ description }}</p>
+              <p class="headline grey--text text--lighten-2 mb-4">{{ description }}</p>
+              <v-divider class="gih--text-separator"></v-divider>
               <v-btn class="deep-purple--text" depressed color="white" :x-large="true">Contact Me</v-btn>
             </v-col>
           </v-row>
@@ -30,7 +31,7 @@ export default {
     return {
       preTitle: 'HELLO, I\'M...',
       title: 'JOE HOLT',
-      description: 'Thank you for visiting my portfolio! I am a Computer Science student at the University of Wisconsin-Madison. I am interest in high performance computing and aritifical intelligence. Please feel free to contact me with any questions or concerns!'
+      description: 'Thank you for visiting my portfolio! I am a Computer Science student at the University of Wisconsin-Madison with interests in High Performance Computing and Aritifical Intelligence. Please feel free to contact me with any questions or concerns!'
     };
   }
 };
@@ -39,7 +40,7 @@ export default {
 <style>
 
 .general-image-header {
-  background-color: #6c5ce7;
+  background-image: linear-gradient(to bottom right, #4a0072, #6c5ce7);
   height: 95vh;
 }
 
