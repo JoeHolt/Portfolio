@@ -21,7 +21,7 @@
       </v-list>
     </v-navigation-drawer>
     <!-- View on larger displays -->
-    <v-app-bar app fixed flat>
+    <v-app-bar app fixed flat style="height: 6vh;">
       <v-app-bar-nav-icon color="black" class="hidden-md-and-up" @click="drawer = !drawer">
         <v-icon>mdi-dots-vertical</v-icon>  
       </v-app-bar-nav-icon>

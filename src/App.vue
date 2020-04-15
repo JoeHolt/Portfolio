@@ -6,16 +6,21 @@
       <!-- Displays the view the app will display -->
       <router-view></router-view>
     </v-content>
+    
+    <app-footer v-if="true" app></app-footer>
+
   </v-app>
 </template>
 
 <script>
 import AppNavigation from '@/components/AppNavigation';
+import AppFooter from '@/components/AppFooter';
 
 export default {
   name: 'App',
   components: {
-    AppNavigation
+    AppNavigation,
+    AppFooter
   },
   created () {
     document.title = 'Joe Holt | Portfolio';

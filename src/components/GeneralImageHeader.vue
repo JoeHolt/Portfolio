@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid fill-height pb-0 class="general-image-header">
+  <v-container fluid pb-0 class="general-image-header">
     <v-row style="height: 100%">
       <!-- Image half of screen -->
       <v-col class="gih--img_container" :cols="7">
@@ -8,8 +8,8 @@
       <!-- Text half of screen -->
       <v-col :cols="5">
         <!-- Make a new grid to center on this side -->
-        <v-container fill-height>
-          <v-row>
+        <v-container>
+          <v-row style="height=100%;" align="center">
             <v-col class="mr-12">
               <p class="display-1 font-weight-bold grey--text text--lighten-1 text-xs-center mb-0">{{ preTitle }}</p>
               <p class="display-4 font-weight-black white--text text-xs-center mb-4">{{ title }}</p>
@@ -40,6 +40,7 @@ export default {
 
 .general-image-header {
   background-color: #6c5ce7;
+  height: 95vh;
 }
 
 .gih--text-separator {
