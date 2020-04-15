@@ -1,7 +1,8 @@
 <template>
   <span>
-    <general-image-header v-if="true"></general-image-header>
-    <experience-timeline></experience-timeline>
+    <projects></projects>
+    <general-image-header v-if="false"></general-image-header>
+    <experience-timeline v-if="false"></experience-timeline>
   </span>
 </template>
 
@@ -9,12 +10,14 @@
 // @ is an alias to /src
 import GeneralImageHeader from '@/components/GeneralImageHeader';
 import ExperienceTimeline from '@/components/ExperienceTimeline';
+import Projects from '@/components/Projects';
 
 export default {
   name: 'Home',
   components: {
     GeneralImageHeader,
-    ExperienceTimeline
+    ExperienceTimeline,
+    Projects
   }
 };
 </script>

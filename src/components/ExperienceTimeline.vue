@@ -13,7 +13,7 @@
           >
         </span>
       </template>
-      <v-card class="elevation-3">
+      <v-card class="elevation-3" v-if="experience.noCard !== true">
         <v-card-title class="headline noselect">{{ experience.company }}</v-card-title>
         <v-card-subtitle class="subtitle-1 noselect"> {{ experience.title }} </v-card-subtitle>
         <v-card-text class="noselect">
@@ -58,14 +58,14 @@
                   dark
                   flat
                   >
-                  <v-toolbar-title>{{ experience.company }} - {{ skill.title }}</v-toolbar-title>
+                  <v-toolbar-title class="noselect">{{ experience.company }} - {{ skill.title }}</v-toolbar-title>
                   <v-spacer></v-spacer>
                   <v-btn icon @click="coursesOpened = false">
                     <v-icon>mdi-close</v-icon>
                   </v-btn>
                 </v-toolbar>
                 <!-- Listing skills -->
-                <v-list two-line subheader>
+                <v-list two-line subheader class="noselect">
                   <div v-for="subject in skill.expanded" :key="subject.title">
                     <v-subheader>{{ subject.category }}</v-subheader>
                     <v-list-item v-for="course in subject.items" :key="course.name">
@@ -100,7 +100,7 @@ export default {
           end: 'Present',
           color: '#9b0000',
           description: 'I am currently attending the University of Wisconsin-Madison honors college of Letters and Science in persuit of a degree in Computer Science. I began my journey at UW in fall 2018, and will be graduating next fall. Throughout my time at UW-Madison, I have gained invaluable skills and made connections with people from across the globe:',
-          projects: ['Theta Tau - Exec Board / Treasurer', 'NEXT', 'Natatorium with the Boys'],
+          projects: ['Theta Tau, professional co-ed egineering fraternity - Exec Board / Treasurer', 'NEXT', 'Natatorium with the Boys'],
           skills: [ 
             { title: 'Course Work', 
               category: 'expand', 
@@ -152,11 +152,11 @@ export default {
         },
         {
           company: 'Amazon',
-          title: 'Sowftware Development Engineer',
+          title: 'Sowftware Development Engineering Intern',
           start: 'May 2020',
           end: 'Present',
           color: '#FF9900',
-          description: 'Starting this May, I will be working as a Software Development Intern for Amazon Seattle! I am super excited to begin work and continue expanding my computer science skills!',
+          description: 'Starting this May, I will be working as a Software Development Engineering Intern for Amazon Seattle! I am super excited to begin work and continue expanding my computer science skills!',
           skills: []
         },
         {
