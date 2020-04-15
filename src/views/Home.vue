@@ -14,7 +14,7 @@ import Projects from '@/components/Projects';
 
 export default {
   name: 'Home',
-  mounted () {
+  mounted() {
     window.scrollTo(300, 0);
   },
   components: {

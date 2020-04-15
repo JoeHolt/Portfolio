@@ -8,5 +8,5 @@ var mappings = {
     };
     return map[type];
   }
-}
+};
 export default mappings;

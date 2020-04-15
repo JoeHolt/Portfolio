@@ -1,11 +1,6 @@
 <template>
-  <v-chip
-    class="noselect mb-2 mr-2"
-    :color="mapSkill(category)"
-    pill
-    outlined
-    >
-    {{ title }} 
+  <v-chip class="noselect mb-2 mr-2" :color="mapSkill(category)" pill outlined>
+    {{ title }}
   </v-chip>
 </template>
 
@@ -13,21 +8,19 @@
 import mappings from '@/data/mappings.js';
 export default {
   name: 'SkillPill',
-  props : {
+  props: {
     title: String,
     category: String
   },
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
-    mapSkill (cat) {
+    mapSkill(cat) {
       return mappings.mapSkillToColor(cat);
     }
   }
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

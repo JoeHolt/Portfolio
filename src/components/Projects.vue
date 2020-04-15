@@ -1,27 +1,62 @@
 <template>
   <v-container class="projects" style="max-width: 100%; min-height: 95vh">
-    <v-row justify="center" align="center" style="min-height: 95vh;" class="ma-3">
+    <v-row
+      justify="center"
+      align="center"
+      style="min-height: 95vh;"
+      class="ma-3"
+    >
       <div class="mt-12 mb-12">
-        <p class="display-4 text-center deep-purple--text"> Projects </p>
-        <p class="headline text-center gray--text"> Here are some of my favorite projects </p>
+        <p class="display-4 text-center deep-purple--text">Projects</p>
+        <p class="headline text-center gray--text">
+          Here are some of my favorite projects
+        </p>
       </div>
       <v-row>
         <v-col cols="12">
           <v-row align="center" justify="center">
-            <v-card v-for="project in projects" :key="project.name" width="22vw" class="ma-3">
+            <v-card
+              v-for="project in projects"
+              :key="project.name"
+              width="22vw"
+              class="ma-3"
+            >
               <div
                 :style="computeBackgroundStyle(project)"
-                style="height: 13vw;">
-                <v-icon color="white" :class="project.img_small ? 'projects--card-img__small' : 'projects--card-img'" x-large>{{ project.img }}</v-icon>
+                style="height: 13vw;"
+              >
+                <v-icon
+                  color="white"
+                  :class="
+                    project.img_small
+                      ? 'projects--card-img__small'
+                      : 'projects--card-img'
+                  "
+                  x-large
+                  >{{ project.img }}</v-icon
+                >
               </div>
               <v-card-title v-text="project.name"></v-card-title>
               <v-card-subtitle v-text="project.subtitle"></v-card-subtitle>
-              <v-card-text class="text--primary" style="height: 15vh" v-text="project.description"></v-card-text>
+              <v-card-text
+                class="text--primary"
+                style="height: 15vh"
+                v-text="project.description"
+              ></v-card-text>
               <v-card-actions>
-                <v-btn text color="deep-purple" target="_blank" :href="project.url" :disabled="project.no_url">View Source</v-btn>
+                <v-btn
+                  text
+                  color="deep-purple"
+                  target="_blank"
+                  :href="project.url"
+                  :disabled="project.no_url"
+                  >View Source</v-btn
+                >
                 <v-spacer></v-spacer>
-                <v-btn icon @click="project.show = !project.show"> 
-                  <v-icon>{{ project.show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                <v-btn icon @click="project.show = !project.show">
+                  <v-icon>{{
+                    project.show ? 'mdi-chevron-up' : 'mdi-chevron-down'
+                  }}</v-icon>
                 </v-btn>
               </v-card-actions>
               <!-- Skills -->
@@ -30,14 +65,19 @@
                   <v-divider></v-divider>
                   <v-row style="width: 100%">
                     <v-col cols="12">
-                      <v-row align="start" justify="start" no-gutters class="ml-2 mr-2">
-                        <skill-pill 
-                          v-for="skill in project.skills" 
+                      <v-row
+                        align="start"
+                        justify="start"
+                        no-gutters
+                        class="ml-2 mr-2"
+                      >
+                        <skill-pill
+                          v-for="skill in project.skills"
                           :key="skill.title"
                           class="ma-1"
                           :title="skill.title"
                           :category="skill.category"
-                          >
+                        >
                         </skill-pill>
                       </v-row>
                     </v-col>
@@ -72,14 +112,15 @@ export default {
           no_url: true,
           url: 'https://www.google.com',
           subtitle: 'Course Enroll for iOS Devices',
-          description: 'I created an iOS front end for UW-Madison\'s course enrollment app, pulling and updating live user data from the UW system. Source code is private.',
+          description:
+            "I created an iOS front end for UW-Madison's course enrollment app, pulling and updating live user data from the UW system. Source code is private.",
           skills: [
             { title: 'Swift', category: 'lang' },
             { title: 'SwiftUI', category: 'tool' },
             { title: 'MVC', category: 'dev' },
             { title: 'URLRequest', category: 'tool' },
             { title: 'iOS', category: 'platform' },
-            { title: 'macOS', category: 'platform' },
+            { title: 'macOS', category: 'platform' }
           ]
         },
         {
@@ -92,7 +133,8 @@ export default {
           no_url: true,
           url: 'https://www.google.com',
           subtitle: 'An Android-esque keyboard for iOS',
-          description: 'While in high school, I developed and release SwiftBoard for iPhone as my first app on the App Store. The app is an iOS keyboard extension that adds large amount of functionality the stock keyboard lack The app is an iOS keyboard extension that adds large amount of functionality the stock keyboard lacks. Source code is private.', 
+          description:
+            'While in high school, I developed and release SwiftBoard for iPhone as my first app on the App Store. The app is an iOS keyboard extension that adds large amount of functionality the stock keyboard lack The app is an iOS keyboard extension that adds large amount of functionality the stock keyboard lacks. Source code is private.',
           skills: [
             { title: 'Swift', category: 'lang' },
             { title: 'UIKit', category: 'tool' },
@@ -100,7 +142,7 @@ export default {
             { title: 'Xcode', category: 'tool' },
             { title: '$5,000+ revenue', category: 'acomplisment' },
             { title: 'MVC', category: 'dev' },
-            { title: 'iOS', category: 'platform' },
+            { title: 'iOS', category: 'platform' }
           ]
         },
         {
@@ -113,7 +155,8 @@ export default {
           no_url: false,
           url: 'https://github.com/stsievert/next-face-demo',
           subtitle: 'Predict Facial Emotion',
-          description: 'Along side UW-Madison NEXT researchers, I developed a demo that given an input of the user\'s face, predicts their emotion. My demo was used at the Wisconsin Science Festival.',
+          description:
+            "Along side UW-Madison NEXT researchers, I developed a demo that given an input of the user's face, predicts their emotion. My demo was used at the Wisconsin Science Festival.",
           skills: [
             { title: 'Python', category: 'lang' },
             { title: 'Bokeh', category: 'tool' },
@@ -132,13 +175,14 @@ export default {
           img: 'mdi-chart-bubble',
           url: 'https://github.com/JoeHolt/joeholt.github.io',
           subtitle: 'The Best Website Out There',
-          description: 'I created an iOS front end for UW-Madison\'s course enrollment app, pulling and updating live user data from the UW system.',
+          description:
+            "I created an iOS front end for UW-Madison's course enrollment app, pulling and updating live user data from the UW system.",
           skills: [
             { title: 'Swift', category: 'lang' },
             { title: 'SwiftUI', category: 'tool' },
             { title: 'MVC', category: 'dev' },
             { title: 'URLRequest', category: 'tool' },
-            { title: 'Web', category: 'platform' },
+            { title: 'Web', category: 'platform' }
           ]
         },
         {
@@ -150,7 +194,8 @@ export default {
           img: 'mdi-align-vertical-bottom',
           url: 'https://github.com/JoeHolt/Spartan-Manufacturing-Web',
           subtitle: 'Inventory Tracker for my High School',
-          description: 'While in High School, I created a multiplatform inventory tracker for the tech ed department. It is still used today to track materials and other products.',
+          description:
+            'While in High School, I created a multiplatform inventory tracker for the tech ed department. It is still used today to track materials and other products.',
           skills: [
             { title: 'Python', category: 'lang' },
             { title: 'JavaScript', category: 'lang' },
@@ -158,7 +203,7 @@ export default {
             { title: 'Multiplatform', category: 'platform' },
             { title: 'Web', category: 'platform' },
             { title: 'iOS', category: 'platform' },
-            { title: 'macOS', category: 'platform' },
+            { title: 'macOS', category: 'platform' }
           ]
         },
         {
@@ -170,7 +215,8 @@ export default {
           img: 'mdi-emoticon-lol-outline',
           url: 'https://github.com/nextml/AHA',
           subtitle: 'Preduct Caption Relative Humor',
-          description: 'I assisted the reasearchers in my lab to create a demo that assists users in predicting the relative humor in captions for a New Yorker Caption Contest cartoon.',
+          description:
+            'I assisted the reasearchers in my lab to create a demo that assists users in predicting the relative humor in captions for a New Yorker Caption Contest cartoon.',
           skills: [
             { title: 'Python', category: 'lang' },
             { title: 'JavaScript', category: 'lang' },
@@ -182,20 +228,23 @@ export default {
     };
   },
   methods: {
-    computeBackgroundStyle (project) {
-      let sty = 'background-image: linear-gradient(to bottom right, ' + project.color1 + ', ' + project.color2 + ');';
+    computeBackgroundStyle(project) {
+      let sty =
+        'background-image: linear-gradient(to bottom right, ' +
+        project.color1 +
+        ', ' +
+        project.color2 +
+        ');';
       return sty;
     }
   },
-  created () {
-  }
+  created() {}
 };
 </script>
 
 <style>
-
 .projects {
-  color: "gray";
+  color: 'gray';
   width: 100%;
 }
 
@@ -211,5 +260,4 @@ export default {
   padding-top: 5vh;
   font-size: 12vh !important;
 }
-
 </style>
