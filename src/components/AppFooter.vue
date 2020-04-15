@@ -10,11 +10,14 @@
         <v-btn
           v-for="icon in social"
           :key="icon.icon"
+          style="background-color: rebeccapurple"
           class="mx-4 deep-purple--text"
           color="white"
+          dark
           fab
+          icon
         >
-          <h3>{{ icon.icon }}</h3>
+          <v-icon color="white">{{icon.icon}}</v-icon>
         </v-btn>
       </v-card-text>
 
@@ -44,10 +47,10 @@ export default {
   data() {
     return {
       social: [
-        { icon: 'TW', url: '' },
-        { icon: 'IG', url: '' },
-        { icon: 'LI', url: '' },
-        { icon: 'FB', url: '' }
+        { icon: 'mdi-twitter', url: '' },
+        { icon: 'mdi-instagram', url: '' },
+        { icon: 'mdi-linkedin', url: '' },
+        { icon: 'mdi-facebook', url: '' }
       ]
     };
   }

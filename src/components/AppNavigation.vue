@@ -18,7 +18,7 @@
       </v-list>
     </v-navigation-drawer>
     <!-- View on larger displays -->
-    <v-app-bar app fixed flat style="height: 6vh;">
+    <v-app-bar app fixed flat style="height: 65px;">
       <v-app-bar-nav-icon
         color="black"
         class="hidden-md-and-up"

@@ -1,8 +1,8 @@
 <template>
   <span>
     <projects></projects>
-    <general-image-header v-if="false"></general-image-header>
-    <experience-timeline v-if="false"></experience-timeline>
+    <general-image-header></general-image-header>
+    <experience-timeline></experience-timeline>
   </span>
 </template>
 
@@ -14,6 +14,9 @@ import Projects from '@/components/Projects';
 
 export default {
   name: 'Home',
+  mounted () {
+    window.scrollTo(300, 0);
+  },
   components: {
     GeneralImageHeader,
     ExperienceTimeline,
