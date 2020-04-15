@@ -6,10 +6,9 @@
       style="min-height: 95vh;"
       class="ma-3"
     >
-      <div class="mt-12 mb-12">
-        <p class="display-4 text-center deep-purple--text">Projects</p>
-        <p class="headline text-center gray--text">
-          Here are some of my favorite projects
+      <div class="mt-8 mb-1">
+        <p class="headline text-center text-weight--bold black--text">
+          I enjoy developing products that have a valuable place in people's life.
         </p>
       </div>
       <v-row>
