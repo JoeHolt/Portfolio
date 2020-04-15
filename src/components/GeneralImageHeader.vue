@@ -3,7 +3,7 @@
     <v-row style="height: 100%">
       <!-- Image half of screen -->
       <v-col class="gih--img_container noselect" :cols="7">
-        <img src="@/assets/simple_joe.png" class="gih--header_img"/>
+        <img src="@/assets/simple_joe.png" class="gih--header_img" />
       </v-col>
       <!-- Text half of screen -->
       <v-col :cols="5">
@@ -11,11 +11,27 @@
         <v-container style="height: 100%;">
           <v-row style="height: 100%;" align="center">
             <v-col class="mr-12">
-              <p class="display-1 font-weight-bold grey--text text--lighten-1 text-xs-center noselect mb-0">{{ preTitle }}</p>
-              <p class="display-4 font-weight-black white--text text-xs-center mb-4 noselect">{{ title }}</p>
-              <p class="headline grey--text text--lighten-2 mb-4 noselect">{{ description }}</p>
+              <p
+                class="display-1 font-weight-bold grey--text text--lighten-1 text-xs-center noselect mb-0"
+              >
+                {{ preTitle }}
+              </p>
+              <p
+                class="display-4 font-weight-black white--text text-xs-center mb-4 noselect"
+              >
+                {{ title }}
+              </p>
+              <p class="headline grey--text text--lighten-2 mb-4 noselect">
+                {{ description }}
+              </p>
               <v-divider class="gih--text-separator"></v-divider>
-              <v-btn class="deep-purple--text" depressed color="white" :x-large="true">Contact Me</v-btn>
+              <v-btn
+                class="deep-purple--text"
+                depressed
+                color="white"
+                :x-large="true"
+                >Contact Me</v-btn
+              >
             </v-col>
           </v-row>
         </v-container>
@@ -27,15 +43,16 @@
 <script>
 export default {
   name: 'GeneralImageHeader',
-  data () {
+  data() {
     return {
-      preTitle: 'HELLO, I\'M...',
+      preTitle: "HELLO, I'M...",
       title: 'JOE HOLT'
     };
   },
   computed: {
-    description () {
-      var yrs = new Date(new Date() - new Date("11/10/1999")).getFullYear() - 1970;
+    description() {
+      var yrs =
+        new Date(new Date() - new Date('11/10/1999')).getFullYear() - 1970;
       return `Thank you for visiting my portfolio! I am a ${yrs} year old Computer Science student at the University of Wisconsin-Madison with interests in High Performance Computing and Aritifical Intelligence. Please feel free to contact me with any questions or concerns!`;
     }
   }
@@ -43,7 +60,6 @@ export default {
 </script>
 
 <style>
-
 .general-image-header {
   background-image: linear-gradient(to bottom right, #3031b4, #6c5ce7);
   height: 95vh;
@@ -66,5 +82,4 @@ export default {
   align-self: flex-end;
   margin: 0 auto;
 }
-
 </style>

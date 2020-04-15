@@ -6,9 +6,8 @@
       <!-- Displays the view the app will display -->
       <router-view></router-view>
     </v-content>
-    
-    <app-footer v-if="true"></app-footer>
 
+    <app-footer v-if="true"></app-footer>
   </v-app>
 </template>
 
@@ -22,7 +21,7 @@ export default {
     AppNavigation,
     AppFooter
   },
-  created () {
+  created() {
     document.title = 'Joe Holt | Portfolio';
   }
 };

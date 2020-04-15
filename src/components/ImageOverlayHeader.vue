@@ -2,8 +2,16 @@
   <v-container fluid fill-height class="header--image">
     <v-row justify-center align-center class="header--image-layer">
       <v-col>
-        <div class="display-4 font-weight-black white--text text-xs-center mb-3">{{ title }}</div>
-        <div class="header--description display-1 font-weight-bold white--text text-xs-center">{{ description }}</div>
+        <div
+          class="display-4 font-weight-black white--text text-xs-center mb-3"
+        >
+          {{ title }}
+        </div>
+        <div
+          class="header--description display-1 font-weight-bold white--text text-xs-center"
+        >
+          {{ description }}
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -12,17 +20,17 @@
 <script>
 export default {
   name: 'ImageOverlayHeader',
-  data () {
+  data() {
     return {
-      title: 'HELLO, I\'M JOE',
-      description: 'I\'m a Computer Science student at the University of Wisconsin-Madison. I hope you enjoy my portfolio.'
+      title: "HELLO, I'M JOE",
+      description:
+        "I'm a Computer Science student at the University of Wisconsin-Madison. I hope you enjoy my portfolio."
     };
   }
 };
 </script>
 
 <style scoped>
-
 .header--image {
   background-size: cover;
   width: 100%;
@@ -43,5 +51,4 @@ export default {
   text-align: center;
   width: 60%;
 }
-
 </style>
