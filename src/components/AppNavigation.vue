@@ -1,4 +1,3 @@
-<!-- https://www.freecodecamp.org/news/how-to-build-a-single-page-application-using-vue-js-vuex-vuetify-and-firebase-838b40721a07/ -->
 <template>
   <span>
     <!-- Only visible on smaller displays -->
@@ -40,6 +39,7 @@
           @click="clickNavbar(index)"
           text
           :outlined="active == index"
+	  v-scroll-to="item.scroll"
           >{{ item.title }}</v-btn
         >
       </div>
@@ -56,10 +56,9 @@ export default {
       drawer: false,
       active: 0,
       items: [
-        { title: 'About' },
-        { title: 'Projects' },
-        { title: 'Experience' },
-        { title: 'Contact' }
+        { title: 'About', scroll: '#about' },
+        { title: 'Projects', scroll: '#projects' },
+        { title: 'Experience', scroll: '#experience' }
       ]
     };
   },

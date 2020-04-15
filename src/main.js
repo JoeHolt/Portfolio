@@ -6,9 +6,26 @@ import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false;
 
-new Vue({
+var VueScrollTo = require('vue-scrollto');
+Vue.use(VueScrollTo, {
+     container: "body",
+     duration: 500,
+     easing: "ease",
+     offset: -63,
+     force: true,
+     cancelable: true,
+     onStart: false,
+     onDone: false,
+     onCancel: false,
+     x: false,
+     y: true
+ })
+
+var vue = new Vue({
   router,
   store,
   vuetify,
   render: h => h(App)
-}).$mount('#app');
+})
+
+vue.$mount('#app');

@@ -1,8 +1,8 @@
 <template>
   <span>
-    <projects></projects>
-    <general-image-header></general-image-header>
-    <experience-timeline></experience-timeline>
+    <projects id="projects"></projects>
+    <general-image-header id="about"></general-image-header>
+    <experience-timeline id="experience"></experience-timeline>
   </span>
 </template>
 
@@ -15,12 +15,13 @@ import Projects from '@/components/Projects';
 export default {
   name: 'Home',
   mounted() {
-    window.scrollTo(300, 0);
   },
   components: {
     GeneralImageHeader,
     ExperienceTimeline,
     Projects
+  },
+  methods : {
   }
 };
 </script>
