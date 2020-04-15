@@ -39,7 +39,7 @@
             <div v-else style="width: 100%;">
               <v-dialog
                 v-model="coursesOpened"
-                width="70vw"
+                width="50vw"
               >
                 <template v-slot:activator="{ on }">
                   <v-btn 
@@ -52,30 +52,30 @@
                   </v-btn>
                 </template>
                 <!-- pop over view -->
-                <v-card>
-                  <v-card-title 
-                    class="headline font-weight-bold deep-purple--text"
-                    >
-                    {{ experience.company }} - {{ skill.title }}
-                  </v-card-title>
-                  <v-card-subtitle
-                    class="subtitle-1 font-weight-medium">
-                    {{ skill.expanded_discription }}
-                  </v-card-subtitle>
-                  <v-divider></v-divider>
-
-                  <v-card-actions>
-		    <v-spacer></v-spacer>
-                    <v-btn
-                      class="font-weight-black"
-                      color="#6c5ce7"
-                      text
-                      @click="coursesOpened = false"
-                      >
-                      Close
-                    </v-btn>
-                  </v-card-actions>
-                </v-card>
+                <v-toolbar
+                  color="#6c5ce7"
+                  class="courses--header headline font-weight-bold"
+                  dark
+                  flat
+                  >
+                  <v-toolbar-title>{{ experience.company }} - {{ skill.title }}</v-toolbar-title>
+                  <v-spacer></v-spacer>
+                  <v-btn icon @click="coursesOpened = false">
+                    <v-icon>mdi-close</v-icon>
+                  </v-btn>
+                </v-toolbar>
+                <!-- Listing skills -->
+                <v-list two-line subheader>
+                  <div v-for="subject in skill.expanded" :key="subject.title">
+                    <v-subheader>{{ subject.category }}</v-subheader>
+                    <v-list-item v-for="course in subject.items" :key="course.name">
+                      <v-list-item-content>
+                        <v-list-item-title>{{ course.name }}</v-list-item-title>
+                        <v-list-item-subtitle class="course--subtitle" v-text="course.description"></v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </div>
+                </v-list>
               </v-dialog>
             </div>
           </div>
@@ -89,7 +89,7 @@
 import mappings from '@/data/mappings.js';
 export default {
   name: 'ExperienceTimeline',
-  data() {
+  data () {
     return {
       coursesOpened: false,
       experiences: [
@@ -106,8 +106,46 @@ export default {
               category: 'expand', 
               expanded_discription: 'A list of the most relevant courses I took at UW-Madison',
               expanded: [
-                { name: 'Operating Systems', description: 'CS 537' },
-                { name: 'Algorithms', description: 'CS 577' },
+                { category: 'Artificial Intelligence', items: [
+                  { name: 'Introduction to Artificial Intelligcent', 
+                    description: 'Linear & logistic regression, clustering, neural networks, state space search, game theory.' },
+                  { name: 'Introduction to Neural Networks', 
+                    description: 'Back-propagation, deep learning, self-organizing maps, support vector machines, clustering, fuzzy logic,  simulated annealing, genetic and evolution algorithms.' },
+                  { name: 'Matrix Methods in Machine Learning', 
+                    description: 'Linear equations, regression, regularization, the singular value decomposition,  iterative algorithms, the lasso, support vector machines, kernel methods, clustering, dictionary learning, neural networks, and deep learning.' }
+                  ]
+                },
+                { category: 'Theory', items: [
+                  { name: 'Introduction to Algorithms', 
+                    description: 'Recursion, divide and concquer, greedy, graph theory, dynammic programming, network flow, NP/NP-hard, and asymptotic analysis.' },
+                  { name: 'Data Structures and Object Oriented Design', 
+                    description: 'Polymorphism, overloading, classes, inheritance, arrays, hash tables, linked lists, trees (binary, AVL, RB, B-tree), queue, stack, heap' },
+                  { name: 'Basic Programming', 
+                    description: 'Through the computer science into programming track, I learned to program & create user interfaces with Java.' }
+                  ]
+                },
+                { category: 'Application', items: [
+                  { name: 'Introduction to Operating Systems', 
+                    description: 'Process schueling, virtual address space, locks & concurrent systems, presistent storage, RAID, filsystems and journaling.'},
+                  { name: 'Introduction to Information Security [Pending]', 
+                    description: 'Cryptographic primitives, penetration testing, security protocols, system security, and emerging topics.'},
+                  { name: 'Database Design and Implementation [Pending]', 
+                    description: 'Hands-on experience with relational and network-based database systems. Implementation techniques for database systems. File organization, query processing, concurrency control, rollback and recovery, integrity and consistency, and view implementation.' },
+                  { name: 'Introduction to Computer Networks [Pending]', 
+                    description: 'Architecture of computer networks and network protocols, protocol layering, reliable transmission, congestion control, flow control, naming and addressing, unicast and multicast routing, network security, network performance widely used protocols'}
+                  ]
+                },
+                { category: 'Math', items: [
+                  { name: 'Calculus and Analystical Geometry',
+                    description: 'Advanced integration techniques, differential equations, convergence, series, vectors, dot product' },
+                  { name: 'Multi-variable Calculus', 
+                    description: 'Vector valued functions, partial derivitives, multiple integrals and integration of vector fields.' },
+                  { name: 'Descrete Math', 
+                    description: 'Foundational knowledge in logic, sets, functions, algorithms, counting, probability, relations, graphs, trees, formal mathematical proofs (focus on induction)' },
+                  { name: 'Introduction to Linear Algebra', 
+                    description: 'Linear equations and matricies, real vector spaces, linear transformations and matricies, determinants, Eigenvalues and Eigenvectors and inner product spaces.' }
+                  ]
+                },
               ]
             } 
           ]
@@ -184,5 +222,18 @@ export default {
 .experience-timeline {
   height: 95vh;
   background-color: white;
+}
+
+.course--subtitle {
+  white-space: normal; 
+  word-wrap: break-word; 
+  -webkit-line-clamp: unset !important;
+}
+
+.courses--header {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 </style>
