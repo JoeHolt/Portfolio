@@ -1,5 +1,5 @@
 <template>
-  <v-footer fluid padless app class="footer">
+  <v-footer fluid padless absolute app class="footer">
     <v-card
       style="flex-grow: 1"
       flat
