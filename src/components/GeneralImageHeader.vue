@@ -8,8 +8,8 @@
       <!-- Text half of screen -->
       <v-col :cols="5">
         <!-- Make a new grid to center on this side -->
-        <v-container>
-          <v-row style="height=100%;" align="center">
+        <v-container style="height: 100%;">
+          <v-row style="height: 100%;" align="center">
             <v-col class="mr-12">
               <p class="display-1 font-weight-bold grey--text text--lighten-1 text-xs-center mb-0">{{ preTitle }}</p>
               <p class="display-4 font-weight-black white--text text-xs-center mb-4">{{ title }}</p>

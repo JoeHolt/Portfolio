@@ -1,7 +1,7 @@
 <template>
   <span>
     <general-image-header v-if="true"></general-image-header>
-    <general-image-header v-if="true"></general-image-header>
+    <general-image-header v-if="true" color="white" style="background-color: white !important;"></general-image-header>
     <image-overlay-header v-if="false"></image-overlay-header>
   </span>
 </template>

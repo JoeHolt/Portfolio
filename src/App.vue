@@ -7,7 +7,7 @@
       <router-view></router-view>
     </v-content>
     
-    <app-footer v-if="true" app></app-footer>
+    <app-footer v-if="true"></app-footer>
 
   </v-app>
 </template>
