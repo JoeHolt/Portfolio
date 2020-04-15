@@ -13,6 +13,8 @@
           style="background-color: rebeccapurple"
           class="mx-4 deep-purple--text"
           color="white"
+          :href="icon.url"
+          target="_blank"
           dark
           fab
           icon
@@ -47,10 +49,10 @@ export default {
   data() {
     return {
       social: [
-        { icon: 'mdi-twitter', url: '' },
-        { icon: 'mdi-instagram', url: '' },
-        { icon: 'mdi-linkedin', url: '' },
-        { icon: 'mdi-facebook', url: '' }
+        { icon: 'mdi-twitter', url: 'https://twitter.com/_joeholt_' },
+        { icon: 'mdi-instagram', url: 'https://www.instagram.com/_joeholt_/' },
+        { icon: 'mdi-linkedin', url: 'https://www.linkedin.com/in/josephpholt' },
+        { icon: 'mdi-facebook', url: 'https://www.facebook.com' }
       ]
     };
   }
