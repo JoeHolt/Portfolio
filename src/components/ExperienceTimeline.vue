@@ -42,11 +42,11 @@
               :category="skill.category"
             ></skill-pill>
             <div v-else style="width: 100%;">
-              <v-dialog v-model="coursesOpened" width="50vw">
+              <v-dialog v-model="coursesOpened" width="35vw">
                 <template v-slot:activator="{ on }">
                   <v-btn
                     text
-                    class="font-weight-black"
+                    class="font-weight-black mb-1"
                     color="#6c5ce7"
                     v-on="on"
                   >
@@ -114,11 +114,10 @@ export default {
           end: 'Present',
           color: '#9b0000',
           description:
-            'I am currently attending the University of Wisconsin-Madison honors college of Letters and Science in persuit of a degree in Computer Science. I began my journey at UW in fall 2018, and will be graduating next fall. Throughout my time at UW-Madison, I have gained invaluable skills and made connections with people from across the globe:',
+            'I am currently attending the University of Wisconsin-Madison Honors College of Letters and Science in pursuit of a degree in Computer Science. I began my journey at the University of Wisconsin in Fall 2018, and plan to graduate in Spring 2021. Throughout my time at UW-Madison, I have gained invaluable skills and made connections with people from across the globe:',
           projects: [
             'Theta Tau, professional co-ed egineering fraternity - Exec Board / Treasurer',
-            'NEXT',
-            'Natatorium with the Boys'
+            'NEXT'
           ],
           skills: [
             {
@@ -238,7 +237,7 @@ export default {
           end: 'Present',
           color: '#99cc33',
           description:
-            'Starting in August 2019, I began a full-stack web dev summer internship at PegEx, a Software as a Service company for waste management companies. Upon completion of my internship, I was promoted to Junior Developer where I have continued to work part-time during the school year. Some of my favorite projects thus far can be seen bellow:',
+            'Starting in May 2019, I began working as a full-stack web devevelopment internship at PegEx, a Software as a Service company for waste management companies. Upon completion of my internship, I was promoted to Junior Developer where I have continued to work part-time during the school year. Some of my favorite projects thus far can be seen bellow:',
           projects: [
             'Added Microsoft SSO to the web app',
             'Implemented dynamic translation strings throughout platform',
@@ -261,7 +260,7 @@ export default {
           end: 'Present',
           color: '#c5050c',
           description:
-            'Starting August before my freshman year of colllege, I started working as a research assistent at the University of Wisconsin-Madison NEXT Machine Learning Lab under faculty member Dr. Robert Nowak. In this position I have done research in the fields of active learning, humor and clustering. Some of the most notable projects I worked on:',
+            'Starting August before my freshman year of college, I started working as a research assistent at the University of Wisconsin-Madison NEXT Machine Learning Lab under faculty member Dr. Robert Nowak. In this position I have done research in the fields of active learning, humor and clustering. Some of the most notable projects I worked on:',
           projects: [
             'Facial Emotion Regonition and Clustering Demo',
             'AHA: AI Humor Assistent',

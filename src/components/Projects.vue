@@ -112,7 +112,7 @@ export default {
           url: 'https://www.google.com',
           subtitle: 'Course Enroll for iOS Devices',
           description:
-            "I created an iOS front end for UW-Madison's course enrollment app, pulling and updating live user data from the UW system. Source code is private.",
+            "I created an iOS front end for UW-Madison's course enrollment app, pulling and updating live user data from the UW system. The source code is private.",
           skills: [
             { title: 'Swift', category: 'lang' },
             { title: 'SwiftUI', category: 'tool' },
@@ -133,7 +133,7 @@ export default {
           url: 'https://www.google.com',
           subtitle: 'An Android-esque keyboard for iOS',
           description:
-            'While in high school, I developed and release SwiftBoard for iPhone as my first app on the App Store. The app is an iOS keyboard extension that adds large amount of functionality the stock keyboard lack The app is an iOS keyboard extension that adds large amount of functionality the stock keyboard lacks. Source code is private.',
+            'While in high school, I developed and release SwiftBoard for iPhone as my first app on the App Store. SwiftBoard is an iOS keyboard extension that adds extra functionality on top of the stock keyboard. The source code is private.',
           skills: [
             { title: 'Swift', category: 'lang' },
             { title: 'UIKit', category: 'tool' },
@@ -155,7 +155,7 @@ export default {
           url: 'https://github.com/stsievert/next-face-demo',
           subtitle: 'Predict Facial Emotion',
           description:
-            "Along side UW-Madison NEXT researchers, I developed a demo that given an input of the user's face, predicts their emotion. My demo was used at the Wisconsin Science Festival.",
+            "Alongside UW-Madison NEXT researchers, I developed a demo that, given an input of the user's face, predicts their emotion. My demo was showcased at the Wisconsin Science Festival.",
           skills: [
             { title: 'Python', category: 'lang' },
             { title: 'Bokeh', category: 'tool' },
@@ -174,13 +174,11 @@ export default {
           img: 'mdi-chart-bubble',
           url: 'https://github.com/JoeHolt/joeholt.github.io',
           subtitle: 'The Best Website Out There',
-          description:
-            "I created an iOS front end for UW-Madison's course enrollment app, pulling and updating live user data from the UW system.",
+          description: "I created the website you are currently reading as a way to showcase the work I have done in the field of computer science. The website represents the cumulation of my design skills.",
           skills: [
-            { title: 'Swift', category: 'lang' },
-            { title: 'SwiftUI', category: 'tool' },
+            { title: 'JavaScript', category: 'lang' },
+            { title: 'Vue', category: 'tool' },
             { title: 'MVC', category: 'dev' },
-            { title: 'URLRequest', category: 'tool' },
             { title: 'Web', category: 'platform' }
           ]
         },
@@ -194,7 +192,7 @@ export default {
           url: 'https://github.com/JoeHolt/Spartan-Manufacturing-Web',
           subtitle: 'Inventory Tracker for my High School',
           description:
-            'While in High School, I created a multiplatform inventory tracker for the tech ed department. It is still used today to track materials and other products.',
+            'While in high school, I created a multiplatform inventory tracker for my school\'s tech ed department. The tool was designed to track inventories of raw materials, and completed products while being supported on a variety of platforms. The tool is still used today.',
           skills: [
             { title: 'Python', category: 'lang' },
             { title: 'JavaScript', category: 'lang' },
@@ -215,7 +213,7 @@ export default {
           url: 'https://github.com/nextml/AHA',
           subtitle: 'Preduct Caption Relative Humor',
           description:
-            'I assisted the reasearchers in my lab to create a demo that assists users in predicting the relative humor in captions for a New Yorker Caption Contest cartoon.',
+            'Working along side my fellow researchers, I created a demo that assists users by predicting the relative humor in captions for a New Yorker Caption Contest cartoon.',
           skills: [
             { title: 'Python', category: 'lang' },
             { title: 'JavaScript', category: 'lang' },
