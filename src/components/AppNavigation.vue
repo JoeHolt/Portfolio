@@ -38,7 +38,6 @@
           color="#6c5ce7"
           @click="clickNavbar(index)"
           text
-          :outlined="active == index"
 	  v-scroll-to="item.scroll"
           >{{ item.title }}</v-btn
         >

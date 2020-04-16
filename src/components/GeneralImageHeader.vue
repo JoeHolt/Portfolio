@@ -11,7 +11,7 @@
         <v-container style="height: 100%;">
           <v-row style="height: 10%; opacity: 70%;" align="start" justify="start">
             <v-btn text x-large class="white--text" @click="$emit('projectsClicked')" v-scroll-to="'#projects'">
-              <v-icon color="white" class="mr-2">mdi-chevron-up</v-icon>
+              <v-icon color="white" class="mr-2" large>mdi-chevron-up</v-icon>
               PROJECTS
             </v-btn>
           </v-row>
@@ -42,7 +42,7 @@
           </v-row>
           <v-row style="height: 10%; opacity: 70%;" align="end" justify="start">
             <v-btn text x-large class="white--text" v-scroll-to="'#experience'">
-              <v-icon color="white" class="mr-2">mdi-chevron-down</v-icon>
+              <v-icon color="white" class="mr-2" large>mdi-chevron-down</v-icon>
               EXPERIENCE
             </v-btn>
           </v-row>

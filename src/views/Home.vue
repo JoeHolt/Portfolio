@@ -15,6 +15,8 @@ import Projects from '@/components/Projects';
 export default {
   name: 'Home',
   mounted() {
+    var container = this.$el.querySelector("#about");
+    container.scrollIntoView(false);
   },
   components: {
     GeneralImageHeader,
