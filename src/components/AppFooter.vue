@@ -39,11 +39,9 @@ export default {
       social: [
         { icon: 'mdi-twitter', url: 'https://twitter.com/_joeholt_' },
         { icon: 'mdi-instagram', url: 'https://www.instagram.com/_joeholt_/' },
-        {
-          icon: 'mdi-linkedin',
-          url: 'https://www.linkedin.com/in/josephpholt'
-        },
-        { icon: 'mdi-facebook', url: 'https://www.facebook.com' }
+        { icon: 'mdi-linkedin', url: 'https://www.linkedin.com/in/josephpholt' },
+        { icon: 'mdi-facebook', url: 'https://www.facebook.com' },
+        { icon: 'mdi-email', url: 'mailto:contact@joeholt.dev?subject="Hello! I am contacting you from JoeHolt.dev!"' }
       ]
     };
   }

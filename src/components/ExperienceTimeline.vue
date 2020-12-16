@@ -13,7 +13,7 @@
         >
         </span>
       </template>
-      <v-card class="elevation-3" v-if="experience.noCard !== true">
+      <v-card class="elevation-4" v-if="experience.noCard !== true">
         <v-card-title class="headline noselect">{{
           experience.company
         }}</v-card-title>

@@ -8,7 +8,7 @@
     >
       <div class="mt-8 mb-1">
         <p class="headline text-center text-weight--bold black--text">
-          I enjoy developing products that have a valuable place in people's life.
+          I enjoy developing products that have an impact on peoples lives.
         </p>
       </div>
       <v-row>
@@ -178,6 +178,7 @@ export default {
           skills: [
             { title: 'JavaScript', category: 'lang' },
             { title: 'Vue', category: 'tool' },
+            { title: 'Design', category: 'dev' },
             { title: 'MVC', category: 'dev' },
             { title: 'Web', category: 'platform' }
           ]
