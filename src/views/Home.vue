@@ -1,8 +1,8 @@
 <template>
   <span>
-    <projects id="projects"></projects>
     <general-image-header id="about"></general-image-header>
     <experience-timeline id="experience"></experience-timeline>
+    <projects id="projects"></projects>
   </span>
 </template>
 
