@@ -3,22 +3,24 @@
     <v-timeline 
       align-top
       class="experience-frame pt-10 pb-10" 
-      :dense="true"
       >
       <v-timeline-item
-        v-for="experience in exps"
+        v-for="(experience, idx) in exps"
         :key="experience.company"
-        :color="experience.color"
+        color="#2c3747"
       >
-        <template v-slot:opposite>
+        <template v-slot:opposite v-if="idx!=10000">
           <span
             class="headline font-weight-bold noselect"
-            :style="'color: white'"
-            v-text="experience.start"
+            :style="'color: #8686ad'"
+            v-text="makeDateRange(experience)"
           >
           </span>
         </template>
-        <v-card class="elevation-4 white--text " color="#6c5ce7" v-if="experience.noCard !== true">
+        <v-card 
+          class="elevation-4 white--text " 
+          :color="idx % 2== 0 ? '#6c5ce7' : '#f68937'" 
+          v-if="experience.noCard !== true">
           <v-card-title class="headline noselect font-weight-bold">{{
             makeTitle(experience)
           }}</v-card-title>
@@ -110,15 +112,22 @@ export default {
   components: {
     SkillPill
   },
-  data() {
+  data () {
     return {
       coursesOpened: false,
       exps: experience.experiences
     };
   },
+  created () {
+    this.exps.sort((a, b) => a.order > b.order);
+  },
   methods: {
     makeTitle (exp) {
-      return exp.company + ' (' + exp.start + '-' + exp.end + ')'; 
+      // exp.company + ' (' + exp.start + '-' + exp.end + ')'; 
+      return exp.company;
+    },
+    makeDateRange (exp) {
+      return exp.start + ' - ' + exp.end; 
     }
   }
 };
@@ -126,7 +135,7 @@ export default {
 
 <style>
 .experience-timeline {
-  background-color: #e2e2e2;
+  background-color: #353557;
 }
 
 .experience-frame {

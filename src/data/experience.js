@@ -6,6 +6,7 @@ export default  {
         start: 'Fall 2018',
         end: 'Spring 2021',
         color: '#9b0000',
+        order: 0,
         description:
           'Student at the University of Wisconsin-Madison College of Letters and Science persuing of a degree in Computer Science. Taken courses across all breadth of knowledge to become a more rounded and balanced individual. Computer science wise, took courses with a focus on Operating Systems and Artificial Intelligence. Outside of classes, I focused on research and extracuriculars, such as Theta Tau. At Theta Tau, I served as the treasurer and a member of the executive board for two semesters  before graduating.',
         projects: [
@@ -101,6 +102,7 @@ export default  {
         start: 'May 2020',
         end: 'August 2020',
         color: '#FF9900',
+        order: 2,
         description:
           'Worked as a Software Development Intern at Amazon on the Prime Video API Resiliency team. While at Amazon, I utilized internal Amazon tooling and AWS to create a web portal for my team that enables quick interaction with team-specific tools and software. Upon completing my internship with Amazon, I accepted a full time offer to become a Software Development Engineer I beginning in August.',
         projects: [
@@ -124,6 +126,7 @@ export default  {
         start: 'May 2019',
         end: 'May 2020',
         color: '#99cc33',
+        order: 3,
         description:
           'Starting in May 2019, I began working as a full-stack web devevelopment internship at PegEx, a Software as a Service company for waste management companies. Upon completion of my internship, I was promoted to Junior Developer where I have continued to work part-time during the school year. Some of my favorite projects thus far can be seen bellow:',
         projects: [
@@ -147,6 +150,7 @@ export default  {
         start: 'August 2018',
         end: 'Present',
         color: '#c5050c',
+        order: 1,
         description:
           'Starting August before my freshman year of college, I started working as a research assistent at the University of Wisconsin-Madison NEXT Machine Learning Lab under faculty member Dr. Robert Nowak. In this position I have done research in the fields of active learning, humor and clustering. Some of the most notable projects I worked on:',
         projects: [
@@ -168,6 +172,7 @@ export default  {
         start: 'November 2017',
         end: 'May 2018',
         color: '#1891c7',
+        order: 4,
         description:
           "While I was in high school, I worked as a web development intern for USA Clean. During this time, I gained experience with both writing and deploying websites. I was able to work with Amazon Web Service's EC2 and S3 to create live product pages with a focus on responsive design.",
         skills: [
