@@ -10,10 +10,6 @@
         <!-- Make a new grid to center on this side -->
         <v-container style="height: 100%;">
           <v-row style="height: 10%; opacity: 70%;" align="start" justify="start">
-            <v-btn text x-large class="white--text" @click="$emit('projectsClicked')" v-scroll-to="'#projects'">
-              <v-icon color="white" class="mr-2" large>mdi-chevron-up</v-icon>
-              PROJECTS
-            </v-btn>
           </v-row>
           <v-row style="height: 80%;" align="center">
             <v-col class="mr-12">
@@ -57,7 +53,7 @@ export default {
   name: 'GeneralImageHeader',
   data() {
     return {
-      preTitle: "HELLO, I'M...",
+      preTitle: "HELLO, MY NAME IS...",
       title: 'JOE HOLT'
     };
   },
@@ -65,7 +61,7 @@ export default {
     description() {
       var yrs =
         new Date(new Date() - new Date('11/10/1999')).getFullYear() - 1970;
-      return `Thank you for visiting my portfolio! I am a ${yrs} year old Computer Science student at the University of Wisconsin-Madison with interests in High Performance Computing and Aritifical Intelligence. Please feel free to contact me with any questions or concerns!`;
+      return `Welcome to my portolfio. I am a ${yrs} year old student at the University of Wisconsin-Madison. I enjoy building interesting projects and learning about topics previously unknown. This site highlights some of my favorite works, enjoy!`;
     }
   }
 };

@@ -56,8 +56,8 @@ export default {
       active: 0,
       items: [
         { title: 'About', scroll: '#about' },
+        { title: 'Experience', scroll: '#experience' },
         { title: 'Projects', scroll: '#projects' },
-        { title: 'Experience', scroll: '#experience' }
       ]
     };
   },

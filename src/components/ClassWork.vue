@@ -22,7 +22,7 @@
         {{ skill.title }}</v-toolbar-title
       >
       <v-spacer></v-spacer>
-      <v-btn icon @click="coursesOpened = false">
+      <v-btn icon @click="open = false">
         <v-icon>mdi-close</v-icon>
       </v-btn>
     </v-toolbar>
