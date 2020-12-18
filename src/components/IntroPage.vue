@@ -3,7 +3,7 @@
     <v-row class="full-height">
       <!-- Image half of screen -->
       <v-col class="gih--img_container noselect" :cols="7">
-        <img src="@/assets/simple_joe.png" class="gih--header_img" />
+        <img src="@/assets/simple_joe_fixed.png" class="gih--header_img" />
       </v-col>
       <!-- Text half of screen -->
       <v-col :cols="5">
