@@ -50,7 +50,7 @@
 
 <script>
 export default {
-  name: 'GeneralImageHeader',
+  name: 'IntroHeader',
   data() {
     return {
       preTitle: "HELLO, MY NAME IS...",

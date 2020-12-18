@@ -1,6 +1,6 @@
 <template>
   <span>
-    <general-image-header id="about"></general-image-header>
+    <intro-page id="about"></intro-page>
     <experience-timeline id="experience"></experience-timeline>
     <projects id="projects"></projects>
   </span>
@@ -8,7 +8,7 @@
 
 <script>
 // @ is an alias to /src
-import GeneralImageHeader from '@/components/GeneralImageHeader';
+import IntroPage from '@/components/IntroPage';
 import ExperienceTimeline from '@/components/ExperienceTimeline';
 import Projects from '@/components/Projects';
 
@@ -19,7 +19,7 @@ export default {
     container.scrollIntoView(false);
   },
   components: {
-    GeneralImageHeader,
+    IntroPage,
     ExperienceTimeline,
     Projects
   },
