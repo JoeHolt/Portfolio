@@ -1,6 +1,6 @@
 <template>
   <v-container fluid pb-0 class="general-image-header">
-    <v-row style="height: 100%">
+    <v-row class="full-height">
       <!-- Image half of screen -->
       <v-col class="gih--img_container noselect" :cols="7">
         <img src="@/assets/simple_joe.png" class="gih--header_img" />
@@ -8,10 +8,10 @@
       <!-- Text half of screen -->
       <v-col :cols="5">
         <!-- Make a new grid to center on this side -->
-        <v-container style="height: 100%;">
-          <v-row style="height: 10%; opacity: 70%;" align="start" justify="start">
+        <v-container class="full-height">
+          <v-row class="gih--spacing-btn" align="start" justify="start">
           </v-row>
-          <v-row style="height: 80%;" align="center">
+          <v-row class="gih--spacing-content" align="center">
             <v-col class="mr-12">
               <p
                 class="display-1 font-weight-bold grey--text text--lighten-1 text-xs-center noselect mb-0"
@@ -36,7 +36,7 @@
               >
             </v-col>
           </v-row>
-          <v-row style="height: 10%; opacity: 70%;" align="end" justify="start">
+          <v-row class="gih--spacing-btn" align="end" justify="start">
             <v-btn text x-large class="white--text" v-scroll-to="'#experience'">
               <v-icon color="white" class="mr-2" large>mdi-chevron-down</v-icon>
               EXPERIENCE
@@ -71,6 +71,15 @@ export default {
 .general-image-header {
   background-image: linear-gradient(to bottom right, #3031b4, #6c5ce7);
   height: 95vh;
+}
+
+.gih--spacing-btn {
+  height: 10%; 
+  opacity: 70%;
+}
+
+.gih--spacing-content {
+  height: 80%;
 }
 
 .gih--text-separator {

@@ -11,8 +11,7 @@
       >
         <template v-slot:opposite v-if="idx!=10000">
           <span
-            class="headline font-weight-bold noselect"
-            :style="'color: #8686ad'"
+            class="headline font-weight-bold noselect experience--date-text"
             v-text="makeDateRange(experience)"
           >
           </span>
@@ -48,7 +47,7 @@
                 :title="skill.title"
                 :category="skill.category"
               ></skill-pill>
-              <div v-else style="width: 100%;">
+              <div v-else class="full-width">
                 <class-work
                   :company="experience.company"
                   :skill="skill"
@@ -103,16 +102,8 @@ export default {
   margin: 0 15% 0 15%;
 }
 
-.course--subtitle {
-  white-space: normal;
-  word-wrap: break-word;
-  -webkit-line-clamp: unset !important;
+.experience--date-text {
+  color: #8686ad;
 }
 
-.courses--header {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
 </style>

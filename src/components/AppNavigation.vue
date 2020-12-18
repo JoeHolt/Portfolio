@@ -12,10 +12,10 @@
         <v-list-item 
           v-for="(item, index) in items" 
           :key="item.title">
-          <div style="width: 100%">
+          <div class="full-width">
             <v-list-item-content>
               <v-btn
-                color="#6c5ce7"
+                class="nav--button"
                 @click="clickNavbar(index)"
                 text
                 v-scroll-to="item.scroll"
