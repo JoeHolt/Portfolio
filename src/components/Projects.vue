@@ -1,5 +1,5 @@
 <template>
-  <v-container class="projects" style="max-width: 100%; min-height: 95vh">
+  <v-container class="projects">
     <v-row
       justify="center"
       align="center"
@@ -124,7 +124,7 @@ export default {
 <style>
 .projects {
   color: 'gray';
-  width: 100%;
+  min-height: 90vh;
 }
 
 .projects--card-img {
