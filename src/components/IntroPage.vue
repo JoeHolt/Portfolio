@@ -1,12 +1,12 @@
 <template>
-  <v-container fluid pb-0 class="general-image-header">
+  <v-container fluid pb-0 :class="className('general-image-header')">
     <v-row class="full-height">
       <!-- Image half of screen -->
-      <v-col class="gih--img_container noselect" :cols="7">
-        <img src="@/assets/simple_joe.png" class="gih--header_img" />
+      <v-col class="gih--img_container noselect" cols="12" md="7" order="1" order-md="0">
+        <img src="@/assets/simple_joe_fixed.png" class="gih--header_img" />
       </v-col>
       <!-- Text half of screen -->
-      <v-col :cols="5">
+      <v-col cols="12" md="5" order="0" order-md="1">
         <!-- Make a new grid to center on this side -->
         <v-container class="full-height">
           <v-row class="gih--spacing-btn" align="start" justify="start">
@@ -49,19 +49,32 @@
 </template>
 
 <script>
+import introData from '@/data/intro';
 export default {
-  name: 'GeneralImageHeader',
+  name: 'IntroHeader',
   data() {
     return {
-      preTitle: "HELLO, MY NAME IS...",
-      title: 'JOE HOLT'
+      preTitle: '',
+      title: '',
+      description: ''
     };
   },
+  created () {
+    this.title = introData.title;
+    this.preTitle = introData.preTitle;
+    this.description = introData.description;
+  },
   computed: {
-    description() {
-      var yrs =
-        new Date(new Date() - new Date('11/10/1999')).getFullYear() - 1970;
-      return `Welcome to my portolfio. I am a ${yrs} year old student at the University of Wisconsin-Madison. I enjoy building interesting projects and learning about topics previously unknown. This site highlights some of my favorite works, enjoy!`;
+    screenIsSmall () {
+      return !this.$vuetify.breakpoint.mdAndUp
+    }
+  },
+  methods: {
+    className (cName) {
+      if (!this.screenIsSmall) {
+        return cName;
+      }
+      return cName + '--small';
     }
   }
 };
@@ -71,6 +84,10 @@ export default {
 .general-image-header {
   background-image: linear-gradient(to bottom right, #3031b4, #6c5ce7);
   height: 95vh;
+}
+
+.general-image-header--small {
+  background-image: linear-gradient(to bottom right, #3031b4, #6c5ce7);
 }
 
 .gih--spacing-btn {
